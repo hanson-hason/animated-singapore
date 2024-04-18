@@ -11,7 +11,6 @@ let xBase = 0;
 let r = 0;
 let rStar = 0;
 let tStar = 0;
-let sStar = 0;
 
 requestAnimationFrame(drawBase);
 function drawBase() {
@@ -29,10 +28,6 @@ function drawBase() {
     tStar++;
   }
 
-  if (sStar < 5 && r >= 150) {
-    sStar++;
-  }
-
   ctx.fillStyle = "rgb(238, 37, 54)";
   ctx.fillRect(0, 0, xBase, 400);
 
@@ -48,11 +43,11 @@ function drawBase() {
   ctx.arc(360, 200, r, 0, 2 * Math.PI);
   ctx.fill();
 
-  drawStar(ctx, 320, 180, rStar, sStar, tStar);
-  drawStar(ctx, 500, 180, rStar, sStar, tStar);
-  drawStar(ctx, 410, 115, rStar, sStar, tStar);
-  drawStar(ctx, 355, 285, rStar, sStar, tStar);
-  drawStar(ctx, 465, 285, rStar, sStar, tStar);
+  drawStar(ctx, 320, 180, rStar, 5, tStar);
+  drawStar(ctx, 500, 180, rStar, 5, tStar);
+  drawStar(ctx, 410, 115, rStar, 5, tStar);
+  drawStar(ctx, 355, 285, rStar, 5, tStar);
+  drawStar(ctx, 465, 285, rStar, 5, tStar);
 
   requestAnimationFrame(drawBase);
 }
